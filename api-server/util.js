@@ -70,10 +70,10 @@ function getSortedNumber(numArray,type) {
   //convertArray.sort()
  // console.log("Sorted: " + convertArray);
  const newStr = type.replace(/['"]/g, "");
-	console.log("=====uuuuuuuuuuu=======");
-	console.log(newStr);
-	console.log("=====uuuuuuuuuuu=======");
-  console.log(type);
+	//console.log("=====uuuuuuuuuuu=======");
+	//console.log(newStr);
+	//console.log("=====uuuuuuuuuuu=======");
+  //console.log(type);
   return {
       status: 200,
       data: {sorted:sortlistArr}
@@ -81,7 +81,7 @@ function getSortedNumber(numArray,type) {
 }
 
 function assending (arr) {
-  console.log("anojaa");
+  //console.log("anojaa");
   let n = arr.length;
   
   for (let i = 0; i < n; i++) {
