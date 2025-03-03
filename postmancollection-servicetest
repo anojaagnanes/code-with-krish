@@ -1,0 +1,226 @@
+{
+	"info": {
+		"_postman_id": "a58ba7b1-46e8-4069-9f1d-91130be4ddbc",
+		"name": "bootcamp-krish-training",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json",
+		"_exporter_id": "42491936"
+	},
+	"item": [
+		{
+			"name": "http://localhost:3000/orders",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n\r\n    \"customerId\":5,\r\n\r\n    \"items\":[\r\n\r\n        {\r\n\r\n            \"productId\":5,\r\n\r\n            \"price\":100,\r\n\r\n            \"quantity\":5\r\n\r\n        },\r\n\r\n         {\r\n\r\n            \"productId\":67,\r\n\r\n            \"price\":200,\r\n\r\n            \"quantity\":3\r\n\r\n        }\r\n\r\n    ]\r\n\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "http://localhost:3000/orders"
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:3000/orders",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "GET",
+				"header": [],
+				"url": "http://localhost:3000/orders"
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:3000/orders/1/status",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "PATCH",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"status\": \"PENDING\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "http://localhost:3000/orders/1/status"
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:3000/customers/",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"name\":\"JOhn Doe\",\r\n    \"email\": \"john@evamle.com\",\r\n    \"address\":\"123 main street\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "http://localhost:3000/customers/"
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:3000/customers/1",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "GET",
+				"header": [],
+				"url": "http://localhost:3002/customers/1"
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:3002/customers/",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "http://localhost:3002/customers/"
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:3001/products",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"name\":\"Laptop\",\r\n    \"price\": 1200.50,\r\n    \"quantity\":10\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "http://localhost:3001/products"
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:3001/products/1",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "GET",
+				"header": [],
+				"url": "http://localhost:3001/products/1"
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:3001/products",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "[\r\n    {\r\n    \"name\": \"Laptop\",\r\n    \"price\": 1200.5,\r\n    \"quantity\": 10,\r\n    \"id\": 1\r\n},\r\n\r\n{\r\n    \"name\": \"TV\",\r\n    \"price\": 1200.5,\r\n    \"quantity\": 10,\r\n    \"id\": 2\r\n}\r\n]",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "http://localhost:3001/products"
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:3001/products/1/validate?quantity=8778",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3001/products/1/validate?quantity=8778",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3001",
+					"path": [
+						"products",
+						"1",
+						"validate"
+					],
+					"query": [
+						{
+							"key": "quantity",
+							"value": "8778"
+						}
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
